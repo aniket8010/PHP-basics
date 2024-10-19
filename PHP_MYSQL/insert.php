@@ -1,4 +1,4 @@
-<!-- <form action="" method="post">
+<form action="" method="post">
     <input type="text" name="name" placeholder="Enter your name">
     <br>
     <br>
@@ -15,26 +15,26 @@
     <br>
     <br>
     <button>Add new Student</button>
-</form> -->
+</form>
 
 <?php
 
-// if (isset($_POST['name'])) {
-//     $name=$_POST['name'];
-//     $course=$_POST['course'];
-//     $batch=$_POST['batch'];
-//     $city=$_POST['city'];
-//     $year=$_POST['year'];
+if (isset($_POST['name'])) {
+    $name=$_POST['name'];
+    $course=$_POST['course'];
+    $batch=$_POST['batch'];
+    $city=$_POST['city'];
+    $year=$_POST['year'];
 
-//     include("./config.php");
+    include("./config.php");
 
-//     $student = $conn->prepare("INSERT INTO `students`(`id`,`name`,`course`,`batch`,`city`,`year`) 
-//     VALUES(NULL,'$name','$course','$batch','$city','$year')");
-//     $result = $student->execute();
+    $student = $conn->prepare("INSERT INTO `students`(`id`,`name`,`course`,`batch`,`city`,`year`) 
+    VALUES(NULL,'$name','$course','$batch','$city','$year')");
+    $result = $student->execute();
 
-//     if ($result) {
-//         echo "Data inserted successfully";
-//     } else {
-//         echo "Data NOt inserted";
-//     }
-// }
+    if ($result) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Data NOt inserted";
+    }
+}
