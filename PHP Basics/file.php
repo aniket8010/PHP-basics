@@ -1,25 +1,25 @@
 <?php
-// if (isset($_POST["filename"])) {
-//     $filename = "files/" . $_POST["filename"];
-//     $content = $_POST['content'];
-//     $file = fopen($filename, "w") or die("unable to ceate file");
-//     fwrite($file, $content);
-//     fclose($file);
-//     echo "file Created";
-// }
+if (isset($_POST["filename"])) {
+    $filename = "files/" . $_POST["filename"];
+    $content = $_POST['content'];
+    $file = fopen($filename, "w") or die("unable to ceate file");
+    fwrite($file, $content);
+    fclose($file);
+    echo "file Created";
+}
 
-// 
+
 ?>
 
-<!-- // <form action="" method="post">
-//     <input type="text" name="filename" placeholder="Enter file name">
-//     <br>
-//     <br>
-//     <textarea name="content" id=""></textarea>
-//     <br>
-//     <br>
-//     <button>Create File</button>
-// </form> -->
+<form action="" method="post">
+    <input type="text" name="filename" placeholder="Enter file name">
+    <br>
+    <br>
+    <textarea name="content" id=""></textarea>
+    <br>
+    <br>
+    <button>Create File</button>
+</form>
 
 
 <!-- Read File -->
@@ -53,11 +53,11 @@
 <!-- GET LIST OF FILES  -->
 
 <?php
-$path = "files";
-$items = scandir($path);
-$items=array_diff($items,array(".",".."));
-foreach($items as $item){
-    echo "<a href=files/$item>$item</a>";
-    echo "<br>";
-}
+// $path = "files";
+// $items = scandir($path);
+// $items = array_diff($items, array(".", ".."));
+// foreach ($items as $item) {
+//     echo "<a href=files/$item>$item</a>";
+//     echo "<br>";
+// }
 ?>
